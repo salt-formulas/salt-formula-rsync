@@ -1,0 +1,15 @@
+
+{% set proxy = salt['grains.filter_by']({
+    'Debian': {
+        'pkgs': ['rsync'],
+        'service': 'rsyncd',
+        'user': 'root',
+        'group': 'root',
+    },
+    'RedHat': {
+        'pkgs': ['rsync'],
+        'service': 'rsyncd',
+        'user': 'root',
+        'group': 'root',
+    },
+}, merge=salt['pillar.get']('rsync:server')) %}

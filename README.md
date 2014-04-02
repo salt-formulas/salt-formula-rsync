@@ -1,6 +1,5 @@
 
-# rsync server
-
+# rsync
 
 ## Sample pillar
 
@@ -14,3 +13,4 @@
           read only: False
 
 ## Read more
+
