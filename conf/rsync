@@ -48,7 +48,7 @@ RSYNC_NICE=''
 #       allows crc checksumming etc.
 service rsync
 {
-        disable = no
+        disable         = no
         flags           = IPv6
         socket_type     = stream
         wait            = no
