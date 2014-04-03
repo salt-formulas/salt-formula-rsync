@@ -5,11 +5,16 @@
         'service': 'rsyncd',
         'user': 'root',
         'group': 'root',
+        'config': '/etc/default/rsync',
     },
     'RedHat': {
         'pkgs': ['rsync', 'xinetd'],
         'service': 'xinetd',
         'user': 'root',
         'group': 'root',
+        'config': '/etc/xinetd.d/rsync',
     },
 }, merge=salt['pillar.get']('rsync:server')) %}
+
+
+

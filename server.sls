@@ -6,9 +6,21 @@ rsync_packages:
   pkg.installed:
   - names: {{ server.pkgs }}
 
-/etc/rsyncd.conf:
+rsync_config:
   file.managed:
+  - name: /etc/rsyncd.conf
   - source: salt://rsync/conf/rsyncd.conf
+  - template: jinja
+  - user: root
+  - group: root
+  - mode: 644
+  - require:
+    - pkg: rsync_packages
+
+rsync_startup_config:
+  file.managed:
+  - name: {{ server.config }}
+  - source: salt://rsync/conf/rsync
   - template: jinja
   - user: root
   - group: root
@@ -20,6 +32,7 @@ rsync_service:
   service.running:
   - name: {{ server.service }}
   - watch:
-    - file: /etc/rsyncd.conf
+    - file: rsync_config
+    - file: rsync_startup_config
 
 {%- endif %}
