@@ -1,0 +1,22 @@
+doc:
+  name: Sensu
+  description: Monitor servers, services, application health, and business KPIs. Get notified about failures before your users do. Collect and analyze custom metrics.
+  role:
+  {%- if pillar.sensu.client is defined %}
+  {%- from "sensu/map.jinja" import client with context %}
+    client:
+      name: client
+      param:
+        message_queue:
+          value: {{ client.message_queue.host }}:{{ client.message_queue.port }}
+  {%- endif %}
+  {%- if pillar.sensu.server is defined %}
+    server:
+      name: server
+      param: {}
+  {%- endif %}
+  {%- if pillar.sensu.dashboard is defined %}
+    dashboard:
+      name: dashboard
+      param: {}
+  {%- endif %}
