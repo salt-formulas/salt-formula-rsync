@@ -10,11 +10,11 @@ rsync is an open source utility that provides fast incremental file transfer.
         enabled: true
         bind:
           address: 0.0.0.0
-        modules:
-        - name: name
-          max connections: 2
-          device: /srv/rsync/
-          read only: False
+        module:
+          name:
+            max_connections: 2
+            path: /srv/rsync
+            read_only: False
 
 ## Read more
 
