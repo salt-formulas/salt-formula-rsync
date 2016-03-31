@@ -9,7 +9,7 @@ rsync_packages:
 rsync_config:
   file.managed:
   - name: /etc/rsyncd.conf
-  - source: salt://rsync/conf/rsyncd.conf
+  - source: salt://rsync/files/rsyncd.conf
   - template: jinja
   - user: root
   - group: root
@@ -20,7 +20,7 @@ rsync_config:
 rsync_startup_config:
   file.managed:
   - name: {{ server.config }}
-  - source: salt://rsync/conf/rsync
+  - source: salt://rsync/files/rsync
   - template: jinja
   - user: root
   - group: root
