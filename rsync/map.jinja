@@ -2,7 +2,7 @@
 {% set server = salt['grains.filter_by']({
     'Debian': {
         'pkgs': ['rsync'],
-        'service': 'rsyncd',
+        'service': 'rsync',
         'user': 'root',
         'group': 'root',
         'config': '/etc/default/rsync',
