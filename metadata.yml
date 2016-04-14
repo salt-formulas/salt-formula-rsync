@@ -1,0 +1,3 @@
+name: "rsync"
+version: "0.2"
+source: "https://github.com/tcpcloud/salt-formula-rsync"
