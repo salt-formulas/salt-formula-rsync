@@ -1,2 +1,0 @@
-rsync/*             /usr/share/salt-formulas/env/rsync/
-metadata/service/*      /usr/share/salt-formulas/reclass/service/rsync/
