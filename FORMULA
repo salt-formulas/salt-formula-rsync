@@ -1,0 +1,8 @@
+name: rsync
+os: Debian, RedHat
+os_family: Debian, RedHat
+version: 201606
+release: 1
+summary: rsync Salt formula
+description: Install and configure rsync server and client.
+top_level_dir: rsync
