@@ -15,6 +15,7 @@ rsync is an open source utility that provides fast incremental file transfer.
             max_connections: 2
             path: /srv/rsync
             read_only: False
+        timeout: 300
 
 ## Read more
 
