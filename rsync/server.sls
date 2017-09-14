@@ -31,6 +31,7 @@ rsync_startup_config:
 rsync_service:
   service.running:
   - name: {{ server.service }}
+  - enable: true
   - watch:
     - file: rsync_config
     - file: rsync_startup_config
