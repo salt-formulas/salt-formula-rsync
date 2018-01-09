@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/tcpcloud/salt-formula-rsync.git
 
 Package: salt-formula-rsync
 Architecture: all
-Depends: ${misc:Depends}, salt-master, reclass
+Depends: ${misc:Depends}
 Description: rsync Salt formula
  Install and configure rsync server and client.
