@@ -1,9 +1,15 @@
 
-# rsync
+=============
+rsync Formula
+=============
 
-rsync is an open source utility that provides fast incremental file transfer. 
+rsync is an open source utility that provides fast incremental file transfer.
 
-## Sample pillar
+
+Sample Metadata
+===============
+
+.. code-block:: yaml
 
     rsync:
       server:
@@ -17,10 +23,13 @@ rsync is an open source utility that provides fast incremental file transfer.
             read_only: False
         timeout: 300
 
-## Read more
+
+References
+==========
 
 * http://rsync.samba.org/
 * http://www.togaware.com/linux/survivor/Rsync_Server.html
+
 
 Documentation and Bugs
 ======================
