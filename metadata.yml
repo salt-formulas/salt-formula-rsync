@@ -1,3 +1,6 @@
 name: "rsync"
 version: "0.2"
 source: "https://github.com/salt-formulas/salt-formula-rsync"
+dependencies:
+- name: sensu
+  source: "https://github.com/salt-formulas/salt-formula-sensu"
